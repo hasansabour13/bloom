@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+a.active{
+  font-weight: bold;
+  color: whitesmoke;
+
+}
+h1{
+  text-align: center;
+}
+header{
+  background-color:rgb(255, 255, 255);
+  color: #000;
+}
+
+ul{
+  background-color:#0d62a7 ;
+  border: 2vh solid #0d62a7;
+  list-style-type: none;
+  margin: 0 0 2em 0;
+  padding: 0;
+  display: flex; /* آیتم‌ها کنار هم */
+  flex-wrap: wrap; /* اگر جا نشد، بره خط بعد */
+}
+
+ul li{
+  display: inline-flex;
+
+  margin-right: 3%;
+}
+/* ریسپانسیو ul li */
+/* برای صفحه‌های کوچیک‌تر، فاصله کم بشه */
+@media (max-width: 768px) {
+  ul li {
+    margin-right: 15px; /* فاصله کمتر برای گوشی */
+  }
+}
+
+/* برای موبایل خیلی کوچیک، آیتم‌ها زیر هم بیان */
+@media (max-width: 480px) {
+  ul {
+    flex-direction: column; /* لیست عمودی بشه */
+    align-items: center; /* وسط‌چین */
+  }
+
+  ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* فاصله بین آیتم‌ها */
+  }
+}
+.logo{
+  width:10% ;
+  height:10% ;
+  border-radius: 49%;
+  margin: 0.5%;
+
+}
+.ca{
+  display: flex;
+  align-items: center;
+  gap: 10px; /* فاصله بین عکس و اینپوت */
+}
+
+.search-form {
+  display: flex; /* برای اینکه دکمه و اینپوت کنار هم باشن */
+  width: 100%; /* کل عرض فرم */
+  max-width: 33rem; /* محدود کردن به اندازه خاص */
+}
+.input{
+
+
+ flex: 1;
+ padding: 10px;
+ border: 2px solid #0d62a7;
+ border-left: none;
+ border-radius: 5px 0 0 5px ; /* گرد کردن فقط گوشه‌های چپ */
+ outline: none; /* حذف خط آبی هنگام فوکوس */
+ margin-right: 6%;
+
+}
+
+button.b{
+
+  background-color: #0d62a7;
+  color: white;
+  border: 2px solid #0d62a7;
+  border-left: none; /* برای اینکه دوتا خط کنار هم نیفته */
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius:  5px 0 0 5px; /* گرد کردن فقط گوشه‌های راست */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none;
+  margin-right: -3px;
+
+}
+button.b mat-icon {
+  font-size: 20px;
+}
+
+.b:hover{
+  cursor: pointer;
+}
+
+button.m{
+  background-color:#0d62a7;
+  color: white;
+  margin-left: 1rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+.b2{
+  margin-right: 19%;
+  display: flex; /* دکمه‌ها کنار هم بمونن */
+  flex-wrap: nowrap; /* نذاره روی هم بیفتن */
+  gap: 10px; /* فاصله بین دکمه‌ها */
+
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+}
+
+.mahsolat{
+  cursor: pointer;
+}
+
+/* کد های نوار بالای هدر */
+.marquee {
+  height: 50px; /* ارتفاع نوار */
+  overflow: hidden; /* جلوگیری از نمایش متن اضافه */
+  background: #0d62a7; /* رنگ پس‌زمینه */
+  position: relative;
+}
+
+/* استایل برای متن متحرک */
+.marquee {
+  position: relative; /* مرجع برای موقعیت متن */
+  height: 50px; /* ارتفاع مشخص */
+  overflow: hidden;
+  background:#0d62a7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee p {
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  animation: marquee-vertical 6s ease-in-out infinite;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  animation: fadeSlide 6s ease-in-out infinite;
+  font-size: 26px;
+  margin-top: 1%;
+}
+
+.line2 {
+  animation-delay: 6s;
+}
+
+/* انیمیشن حرکت عمودی */
+@keyframes marquee-vertical {
+  0% {
+    top: 100%;
+  }
+  10%, 40% {
+    top: 0%;
+  }
+  50% {
+    top: -100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+.marquee p:nth-child(2) {
+  animation-delay: 3s;
+}

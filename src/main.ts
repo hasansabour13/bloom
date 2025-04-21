@@ -1,6 +1,14 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { bootstrapApplication } from '@angular/platform-browser'; // ایمپورت برای راه‌اندازی اپلیکیشن
+import { provideRouter } from '@angular/router'; // ایمپورت برای روتر
+import { AppComponent } from './app/app.component'; // کامپوننت اصلی اپلیکیشن
+import { routes } from './app/app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'; // ایمپورت مسیرها از فایل app.routes.ts
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// راه‌اندازی اپلیکیشن Angular و اضافه کردن روتر
+bootstrapApplication(AppComponent, {
+  providers: [
+    // اینجا روتر رو با مسیرها (routes) ارائه می‌دهیم
+    provideRouter(routes), provideAnimationsAsync()
+  ]
+})
+  .catch((err) => console.error(err)); // در صورت بروز خطا، خطا را در کنسول نمایش می‌دهیم

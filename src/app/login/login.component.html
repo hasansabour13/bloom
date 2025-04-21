@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="welcome-section">
+    <h2>به بلوم استایل خوش آمدید</h2>
+    <p>خوش برگشتی! خیلی خوشحالیم که اینجایی. خیلی خوبه که دوباره می‌بینیمت</p>
+    <button class="signup-btn">هنوز حساب نداری؟ ثبت‌ نام کن</button>
+</div>
+
+<div class="signin-section">
+  <h2>Signin</h2>
+  <form action="">
+    <input type="text"  placeholder="ByteWebster"  [(ngModel)]="username" name="username">
+    <input type="password" placeholder="●●●●●●●●">
+    <button class="signin-btn" type="button" (click)="btn()">Signin</button>
+  </form>
+
+  <p>or signin with</p>
+  <div class="social-icons">
+      <button class="social-btn facebook">f</button>
+      <button class="social-btn google">G+</button>
+      <button class="social-btn linkedin">in</button>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>دسترسی سریع</h3>
+          <ul>
+
+            <li><a routerLink="/contact" class="footer-link">صفحه اصلی</a></li>
+            <li><a routerLink="/media" class="footer-link">پیگیری شکایات</a></li>
+            <li><a routerLink="/guide" class="footer-link">تماس با ما</a></li>
+
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>راهنمای مشتریان</h3>
+          <ul>
+            <li><a routerLink="/contact" class="footer-link">پاسخ به پرسش‌های متداول</a></li>
+            <li><a routerLink="/media" class="footer-link">قوانین</a></li>
+            <li><a routerLink="/guide" class="footer-link">ایمیل: bloom</a></li>
+            <li><a routerLink="/blog" class="footer-link">درباره ما</a></li>
+          </ul>
+      </div>
+
+
+
+
+      <div class="footer-section social">
+          <h3>بلوم استایل در شبکه‌های اجتماعی</h3>
+
+          <div class="social-icons">
+
+              <a href="https://telegram.org"   > <mat-icon>telegram</mat-icon></a>
+              <a href="https://twitter.com" class="social-icon instagram" ><i class="fab fa-instagram"></i></a>
+
+          </div>
+      </div>
+  </div>
+
+</footer>
+
+
+</body>
+</html>
+
