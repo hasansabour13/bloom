@@ -38,12 +38,14 @@ img {
   margin-bottom: 6px;
   margin-left: 9px;
   margin-right: 9px;
+  
 }
 
 a:hover {
   transform: scale(1.1);
   /* border: 9px solid #3a3a3a; */
   background-color: #3a3a3a;
+  transition: transform 0.3s ease-in-out;
 
 }
 
