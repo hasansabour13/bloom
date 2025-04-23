@@ -1,0 +1,66 @@
+<main>
+  <div class="product-detail-container">
+
+    <!-- گالری تصاویر -->
+    <div class="gallery">
+      <img [src]="mainImage" alt="Product Image" class="main-image">
+      <div class="thumbnails">
+        <!-- این کد برای عکس های پایین عکس بزرگ و اصلی لست ngfor -->
+        <img *ngFor="let img of productData?.images" [src]="img" (click)="selectImage(img)" alt="Thumbnail" class="thumbnail">
+      </div>
+    </div>
+
+    <!-- توضیحات محصول -->
+    <div class="product-description">
+      <h2>{{ productData?.name }}</h2>
+      <p>{{ productData?.description }}</p>
+      <p class="price">{{ productData?.price }} تومان</p>
+    </div>
+
+    <!-- دکمه افزودن به سبد خرید -->
+    <div class="add-to-cart">
+      <button mat-raised-button color="accent" >افزودن به سبد خرید</button>
+    </div>
+
+    <!-- فرم ارسال نظر -->
+    <div class="review-section">
+      <h3>نظر شما</h3>
+      <textarea [(ngModel)]="review" placeholder="نظر خود را بنویسید..." rows="4"></textarea>
+      <button mat-raised-button color="primary" (click)="submitReview()">ارسال نظر</button>
+    </div>
+    <p>شناسه محصول: {{ productId }}</p>
+  </div>
+</main>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>دسترسی سریع</h3>
+          <ul>
+            <li><a routerLink="/contact" class="footer-link">صفحه اصلی</a></li>
+            <li><a routerLink="/media" class="footer-link">پیگیری شکایات</a></li>
+            <li><a routerLink="/guide" class="footer-link">تماس با ما</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>راهنمای مشتریان</h3>
+          <ul>
+            <li><a routerLink="/contact" class="footer-link">پاسخ به پرسش‌های متداول</a></li>
+            <li><a routerLink="/media" class="footer-link">قوانین</a></li>
+            <li><a routerLink="/guide" class="footer-link">ایمیل: bloom</a></li>
+            <li><a routerLink="/blog" class="footer-link">درباره ما</a></li>
+          </ul>
+      </div>
+      <div class="footer-section social">
+          <h3>بلوم استایل در شبکه‌های اجتماعی</h3>
+          <div class="social-icons">
+              <a href="https://telegram.org"> <mat-icon>telegram</mat-icon></a>
+              <a href="https://twitter.com" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+

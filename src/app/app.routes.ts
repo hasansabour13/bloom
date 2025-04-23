@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SliderComponent } from './slider/slider.component';
 import { LoginComponent } from './login/login.component';
-
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 export const routes: Routes = [
@@ -15,7 +15,13 @@ export const routes: Routes = [
   { path: 'project', component:ProjectComponent  },
   { path: 'sh', component:ShComponent },
   { path: 'slider', component:SliderComponent },
-  { path: 'login', component:LoginComponent }
+  { path: 'login', component:LoginComponent },
+
+  {
+    path: 'product-detail/:id',
+    component: ProductDetailComponent//برای نشان دادن جزییات شلوار
+  }
+
 
 
 ];
