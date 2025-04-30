@@ -6,6 +6,7 @@
   gap: 30px; /* فاصله بین عکس‌ها */
   flex-wrap: wrap; /* برای رفتن به خط بعدی اگر جا نباشه */
   justify-content: center; /* برای وسط‌چین کردن در کل صفحه */
+  padding-left: 1%;
 }
 
 .image-container {
@@ -46,16 +47,20 @@ a:hover {
   gap: 0;
   align-items: stretch; /* این باعث میشه که اسلایدر و مقاله ارتفاع یکسانی داشته باشن */
   width: 100%;
-  margin: 0;
+  margin-bottom: 1%;
+  overflow: hidden;
+  /* padding-left: 1%; */
+  padding: 1%;
 
 }
 
 /* اسلایدر */
 .slide {
   flex: 0 0 60%; /* عرض اسلایدر 60% */
-  margin: 0;
   display: flex;
   box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3); /* سایه بزرگتر و تیره‌تر */
+
+  overflow: hidden
 
 }
 
@@ -68,17 +73,37 @@ a:hover {
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
+
   border-radius: 10px;
   box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3); /* سایه بزرگتر و تیره‌تر */
-
-
+  overflow: hidden
 
 }
-.ii{
+
+/* تگ ای داخل ارتیکل */
+a.no-hover-effect:hover {
+  transform: none;
+  background-color: transparent;
+  object-fit: cover; /* عکس رو طوری تنظیم می‌کنه که فضای دیو رو پر کنه و نسبت ابعادش حفظ بشه */
+  margin: 0; /* برای از بین بردن هرگونه فاصله اضافی */
+  padding: 0; /* برای اطمینان از اینکه هیچ فاصله‌ای از داخل دیو نداشته باشیم */
+
+}
+
+
+
+
+img.ii{
   width:100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* عکس رو طوری تنظیم می‌کنه که فضای دیو رو پر کنه و نسبت ابعادش حفظ بشه */
+  margin: 0; /* برای از بین بردن هرگونه فاصله اضافی */
+  padding: 0; /* برای اطمینان از اینکه هیچ فاصله‌ای از داخل دیو نداشته باشیم */
+
+
+
+  overflow: hidden
 }
 h1,h2{
   text-align: center;

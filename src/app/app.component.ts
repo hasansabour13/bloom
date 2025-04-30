@@ -29,6 +29,10 @@ export class AppComponent {
     if (this.searchQuery.trim() === 'شلوار' || this.searchQuery.trim() === 'shalvar') {
       this.router.navigate(['/sh']);
     }
+
+    if (this.searchQuery.trim() === 'هودی' || this.searchQuery.trim() === 'hodi' || this.searchQuery.trim() === 'houdi' || this.searchQuery.trim() === 'hoodi' ) {
+      this.router.navigate(['/project']);
+    }
     //trimبرای وقتی که اگه کاربر فاصله اضافی سرچ کرد باز هم بیاره
 
 

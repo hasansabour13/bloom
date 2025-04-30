@@ -48,6 +48,13 @@ export class ProductDetailComponent { // تعریف کامپوننت ProductDeta
       images: ['assets/شلوار/5.jpg'],
       description: 'شلوار پارچه‌ای رسمی'
     },
+
+    {
+      id:'12',
+      images:['assets/هودی/یک.jpg' ,'assets/هودی/دو.jpg' ],
+      description: 'هودی ',
+      price:1500
+    }
     // اینجا می‌تونی محصولات بیشتری اضافه کنی
   ];
 

@@ -3,6 +3,7 @@
   position: relative;  /* قرار دادن در موقعیت نسبی برای استفاده از position در دکمه‌ها */
   width:100%;
   /* height: 100%; */
+  border: 1px solid white;
   overflow: hidden;  /* مخفی کردن هر چیزی که خارج از محدوده اسلایدر باشه */
   border-radius: 10px;  /* گوشه‌های گرد برای اسلایدر */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* سایه نرم برای اسلایدر */
