@@ -10,7 +10,9 @@ import { CommonModule } from '@angular/common';//چون مستقله برای ا
 })
 export class SliderComponent implements OnInit, OnDestroy {
   images: string[] = [
-    'assets/کلاه.jpg',
+    'assets/هودی/پنج.jpg',
+
+
     'assets/شلوار.jpg',
     'assets/عطر.jpg'
   ];
@@ -35,5 +37,10 @@ export class SliderComponent implements OnInit, OnDestroy {
 
   previousSlide() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+//برای نقط اسلایدر
+  goToSlide(index: number) {
+    this.currentIndex = index;
   }
 }

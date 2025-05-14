@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { SliderComponent } from './slider/slider.component';
 import { LoginComponent } from './login/login.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 
 export const routes: Routes = [
@@ -16,7 +17,7 @@ export const routes: Routes = [
   { path: 'sh', component:ShComponent },
   { path: 'slider', component:SliderComponent },
   { path: 'login', component:LoginComponent },
-
+  { path: 'cart', component:CartComponent },
   {
     path: 'product-detail/:id',
     component: ProductDetailComponent//برای نشان دادن جزییات شلوار

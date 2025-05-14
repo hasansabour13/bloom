@@ -41,21 +41,33 @@ ul li{
 
 }
 .bloom-title {
-  font-family: "Century Gothic", "Segoe UI", sans-serif; /* شبیه فونت داخل لوگو */
-  font-size: 14px;
+  font-family: "Great Vibes", "Dancing Script", "Segoe Script", cursive;
+  font-size: 22px;
   font-weight: bold;
   color: #0d62a7;
-  margin-top: 5px;
+  margin-top: 1px;
+ margin-right: 19%;
+}
+.bloom-title2{
+  font-family: "Times New Roman", "Georgia", serif;
+  /* font-family: "Century Gothic", "Segoe UI", sans-serif;  */
+  font-size: 20px;
+  font-weight: bold;
+  color: #0d62a7;
+  margin-top: 1px;
+ margin-right: 23%;
+ margin-top: -18px;
+
 
 }
 
 .logo{
-  width:70% ;
-  height:70% ;
+  width:66% ;
+  height:66% ;
   border-radius: 49%;
   justify-self: end;
   flex-shrink: 0; /* نذار کوچک شه */
-
+  margin-top: 1%;
 }
 .container{
 
@@ -64,6 +76,7 @@ ul li{
   align-items: center;
   gap: 3px; /* فاصله بین لوگو و سرچ */
   /* padding: 1rem; */
+  margin-bottom: -13px;
 }
 
 .search-form {
@@ -74,8 +87,8 @@ ul li{
 
 }
 .input{
+  font-size: 16px;
   display: flex;
-
  padding: 13px;
  border: 2px solid #0d62a7;
  border-left: none;
@@ -195,6 +208,32 @@ button.m{
 .marquee p:nth-child(2) {
   animation-delay: 3s;
 }
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%; /* میاد زیر نوشته "عطر" */
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.dropdown a {
+  display: block;
+}
+
+
+
+
+
 
 /* ریسپانسیو ul li */
 /* برای صفحه‌های کوچیک‌تر، فاصله کم بشه */

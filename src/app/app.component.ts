@@ -6,13 +6,13 @@ import { MatIconModule } from '@angular/material/icon';//برای ایکون م�
 import { FormsModule } from '@angular/forms';//ngmoudle
 import { Router } from '@angular/router';//router
 import { ViewportScroller } from '@angular/common';//اسکرول برای محصولات
-
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule,MatButtonModule,MatIconModule,FormsModule, ],
+  imports: [RouterOutlet, RouterModule,MatButtonModule,MatIconModule,FormsModule,NgIf ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -22,6 +22,15 @@ export class AppComponent {
 
  searchQuery: string = '';//ngmodle برای اینپوت سرچ هدر
  //برای عملیات سرچ هدر
+
+// برای ال آی تو در تو
+isPerfumeOpen = false;
+
+togglePerfumeMenu() {
+  this.isPerfumeOpen = !this.isPerfumeOpen;
+}
+
+
 
  onSearch() {
     console.log('Search for:', this.searchQuery);

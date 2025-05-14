@@ -8,10 +8,15 @@
 
 <div class="container">
 
+<a  routerLink="">
   <div class="logo-wrapper">
     <img class="logo"  src="assets/logo2.jpg" alt="">
-    <p class="bloom-title">Bloom Style</p>
+    <p class="bloom-title">Bloom </p>
+    <p class="bloom-title2"> Style</p>
   </div>
+</a>
+
+
 
 <div class="b1" >
   <form (ngSubmit)="onSearch()" class="search-form" action="">
@@ -32,6 +37,7 @@
 
 
 </div>
+
 
   <ul>
     <li>
@@ -62,6 +68,25 @@
     <li>
       <a routerLink="login" routerLinkActive="active">ثبت نام</a>
     </li>
+
+
+    <li>
+      <a routerLink="cart" routerLinkActive="active"> سبد خرید</a>
+    </li>
+
+
+    <!-- li to dar to -->
+
+    <li class="dropdown" (click)="togglePerfumeMenu()" [class.open]="isPerfumeOpen">
+      <a href="#">عطر</a>
+      <ul class="submenu" *ngIf="isPerfumeOpen">
+        <li><a routerLink="atr-mardane" routerLinkActive="active">مردانه</a></li>
+        <li><a routerLink="atr-zanane" routerLinkActive="active">زنانه</a></li>
+      </ul>
+    </li>
+
+
+<!--  -->
 
   </ul>
 

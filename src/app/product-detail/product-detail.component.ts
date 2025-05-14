@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';//برای ایکون م�
 import { FormsModule } from '@angular/forms';//ngmoudle
 
 import { ViewportScroller } from '@angular/common';//اسکرول برای محصولات
+import { CartService } from '../cart.service';//برای سبد خرید
 
 @Component({
   selector: 'app-product-detail',
@@ -19,7 +20,7 @@ import { ViewportScroller } from '@angular/common';//اسکرول برای مح�
 
 export class ProductDetailComponent { // تعریف کامپوننت ProductDetail
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,private  cartService: CartService) {}
   // constructor فقط برای گرفتن اطلاعات از URL ساخته شده (مثلاً آیدی محصول)
 
   productId: string | null = null;
@@ -51,7 +52,7 @@ export class ProductDetailComponent { // تعریف کامپوننت ProductDeta
 
     {
       id:'12',
-      images:['assets/هودی/یک.jpg' ,'assets/هودی/دو.jpg' ],
+      images:['assets/هودی/یک.jpg' ,'assets/هودی/دو.jpg' ,'assets/هودی/film.mp4' ],
       description: 'هودی ',
       price:1500
     }
@@ -79,6 +80,10 @@ export class ProductDetailComponent { // تعریف کامپوننت ProductDeta
     // وقتی روی یه عکس دیگه کلیک شد، همون عکس جدید رو نشون می‌ده
   }
 
+  isVideo(file: string): boolean {
+    return file.toLowerCase().endsWith('.mp4');
+  }
+
 
   review: string = '';
   // متنی که کاربر برای نظر وارد می‌کنه
@@ -89,6 +94,14 @@ export class ProductDetailComponent { // تعریف کامپوننت ProductDeta
       this.review = '';
       // اگه چیزی توی کادر نظر نوشته شده باشه، یه پیام تشکر نشون می‌ده و نظر رو پاک می‌کنه
     }
-  }
+ }
+
+ //فانکشن برای دکمه سبد خرید
+ addToCart(product: any) {
+  console.log('محصول اضافه شد:', product);
+  this.cartService.addToCart(product);
+}
+
+
 }
 
