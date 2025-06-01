@@ -8,11 +8,10 @@ import { Router } from '@angular/router';//router
 import { ViewportScroller } from '@angular/common';//اسکرول برای محصولات
 import { NgIf } from '@angular/common';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule,MatButtonModule,MatIconModule,FormsModule,NgIf ],
+  imports: [RouterOutlet, RouterModule,MatButtonModule,MatIconModule,FormsModule,NgIf],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

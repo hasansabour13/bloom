@@ -1,7 +1,9 @@
 
 <div class="constructor">
   <h3>سبد خرید</h3>
-<div *ngFor="let item of cartItems">
-  <p>{{ item.name }} - {{ item.price }} تومان</p>
-</div>
+
+  <div *ngFor="let item of cartItems">
+    <img *ngIf="item.images?.length" [src]="item.images[0]" alt="Product Image" class="cart-image">
+    <p>{{ item.description }} - {{ item.price }} تومان</p>
+  </div>
 </div>

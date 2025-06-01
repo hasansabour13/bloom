@@ -30,8 +30,59 @@
 
 
 <div class="b2">
-    <a routerLink="login" routerLinkActive="active"> <button class="m" mat-button >ورود / عضویت</button></a>
-    <button class="m" mat-button>سبد خرید <mat-icon class="cart-icon">shopping_cart</mat-icon></button>
+<!-- آیکون ادمک -->
+<a routerLink="/login" class="login-link" title="ورود / عضویت"  aria-label="ورود">
+  <i class="user-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="7" r="4"></circle>
+      <path d="M5.5 21a6.5 6.5 0 0 1 13 0"></path>
+    </svg>
+  </i>
+</a>
+<!-- سبد خرید -->
+
+<a routerLink="/cart" class="cart-link" aria-label="سبد خرید" title="سبد خرید">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="cart-icon"
+  >
+    <circle cx="9" cy="21" r="1"></circle>
+    <circle cx="20" cy="21" r="1"></circle>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+  </svg>
+</a>
+<!-- علاقه مندی -->
+<a href="#" class="favorite-link" aria-label="محصولات مورد علاقه" title="محصولات مورد علاقه">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="40"
+    height="40"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="favorite-icon"
+  >
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+  </svg>
+</a>
 
 </div>
 

@@ -32,11 +32,22 @@ ul li{
   margin-right: 3%;
 }
 
+.logo{
+  width: 300px;
+  height: 300px;
+  border-radius:50%;
+  justify-self: end;
+
+  margin-top: 1%;
+}
+
 .logo-wrapper {
+   width: 200px;
+  /* height: 200px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* به گوشه بالا چسبیده باشه */
-  flex-shrink: 0; /* نذار کوچک شه */
+
 
 
 }
@@ -46,29 +57,23 @@ ul li{
   font-weight: bold;
   color: #0d62a7;
   margin-top: 1px;
- margin-right: 19%;
+ margin-right: 55%;
 }
 .bloom-title2{
-  font-family: "Times New Roman", "Georgia", serif;
+  font-family: "Great Vibes", "Dancing Script", "Segoe Script", cursive;
+ 
   /* font-family: "Century Gothic", "Segoe UI", sans-serif;  */
   font-size: 20px;
   font-weight: bold;
   color: #0d62a7;
   margin-top: 1px;
- margin-right: 23%;
+ margin-right: 60%;
  margin-top: -18px;
 
 
 }
 
-.logo{
-  width:66% ;
-  height:66% ;
-  border-radius: 49%;
-  justify-self: end;
-  flex-shrink: 0; /* نذار کوچک شه */
-  margin-top: 1%;
-}
+
 .container{
 
   display: grid;
@@ -79,11 +84,79 @@ ul li{
   margin-bottom: -13px;
 }
 
+/* آیکون ادمک */
+.login-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: red;
+}
+
+.login-link .user-icon svg {
+  stroke: currentColor;
+  width: 40px;
+  height:40px;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+}
+/* پایان */
+
+/* برای ایکون سبد خرید */
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.cart-link:hover {
+  color: red;
+}
+
+.cart-icon {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+}
+/* پایان */
+ 
+/* ایکون قلب علاقه مندی */
+.favorite-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black; /* رنگ قرمز */
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.favorite-link:hover {
+  color: red; /* رنگ قرمز تیره‌تر وقتی موس روش میره */
+}
+
+.favorite-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
+ 
+}
+/* پایان */
 .search-form {
   display: flex; /* برای اینکه دکمه و اینپوت کنار هم باشن */
   width: 100%; /* کل عرض فرم */
   max-width: 33rem;
-  margin-left: 46rem;
+  /* margin-left: 46rem; */
 
 }
 .input{
@@ -123,28 +196,19 @@ button.b mat-icon {
   cursor: pointer;
 }
 
-button.m{
-  background-color:#0d62a7;
-  color: white;
-  margin-left: 1rem;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
-  font-size: 1.1rem;
-  white-space: nowrap;
-}
+
 
 .b2{
 
   display: flex; /* دکمه‌ها کنار هم بمونن */
   flex-wrap: nowrap; /* نذاره روی هم بیفتن */
-  gap: 10px; /* فاصله بین دکمه‌ها */
+  gap: 29px; /* فاصله بین دکمه‌ها */
 
   flex-direction: row;
   align-items: center;
+  justify-content: center;  /* افقی وسط چین */
   max-width: 100%;
-  margin-left: 9rem;
+  
 }
 
 .mahsolat{

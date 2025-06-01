@@ -1,4 +1,15 @@
 
+body{
+  margin: 0 auto;
+}
 .constructor{
   color: black;
+  text-align: center;
+}
+
+.cart-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }

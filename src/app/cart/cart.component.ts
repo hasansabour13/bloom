@@ -3,11 +3,12 @@ import { CartService } from '../cart.service';
 import { FormsModule } from '@angular/forms';//ngmoudle
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';//برای روتر
+import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   standalone: true,
-  imports: [ RouterModule,FormsModule,CommonModule],
+  imports: [ RouterModule,FormsModule,CommonModule,NgIf],
 
   styleUrls: ['./cart.component.css']
 })

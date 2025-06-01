@@ -12,7 +12,7 @@
 .image-container {
   text-align: center; /* برای وسط‌چین کردن کپشن */
   background-color: white;
-  border: 9px solid #0d62a7;
+  /* border: 9px solid #0d62a7; */
   border-radius: 10px;
   padding: 5px;
   transition: transform 0.3s;
@@ -28,15 +28,15 @@ img {
 }
 
 .caption {
-  font-size: 14px; /* اندازه متن کپشن */
+  font-size: 28px; /* اندازه متن کپشن */
   color: black; /* رنگ متن */
   margin-top: 5px; /* فاصله از عکس */
 }
 
 a:hover {
   transform: scale(1.1);
-  /* border: 9px solid #3a3a3a; */
-  background-color: #3a3a3a;
+  
+  
   transition: transform 0.3s ease-in-out;
 
 }
@@ -49,14 +49,12 @@ a:hover {
   width: 100%;
   margin-bottom: 1%;
   overflow: hidden;
-  /* padding-left: 1%; */
   padding: 1%;
-
 }
 
 /* اسلایدر */
 .slide {
-  flex: 0 0 60%; /* عرض اسلایدر 60% */
+  flex: 0 0 50%; /* عرض اسلایدر 60% */
   display: flex;
   box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3); /* سایه بزرگتر و تیره‌تر */
 
@@ -66,7 +64,7 @@ a:hover {
 
 /* مقاله */
 .article {
-  flex: 0 0 35%;   /* عرض مقاله 35% */
+  flex: 0 0 50%;   /* عرض مقاله 35% */
  margin-right: 2%;
   display: flex;
   border: 1px solid white;
@@ -74,11 +72,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   /* height: 100%; */
-
   border-radius: 10px;
   box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3); /* سایه بزرگتر و تیره‌تر */
   overflow: hidden
-
 }
 
 /* تگ ای داخل ارتیکل */
@@ -100,13 +96,10 @@ img.ii{
   object-fit: cover; /* عکس رو طوری تنظیم می‌کنه که فضای دیو رو پر کنه و نسبت ابعادش حفظ بشه */
   margin: 0; /* برای از بین بردن هرگونه فاصله اضافی */
   padding: 0; /* برای اطمینان از اینکه هیچ فاصله‌ای از داخل دیو نداشته باشیم */
-
-
-
   overflow: hidden
 }
 h1,h2{
-  text-align: center;
+  text-align: right;
   margin: 3%;
   color: black;
 }
@@ -123,9 +116,6 @@ h1,h2{
   box-sizing: border-box;
 }
 
-
-
-
 .footer-container {
 
   margin: 0 auto; /* وسط‌چین کردن المنت */
@@ -136,8 +126,6 @@ h1,h2{
 }
 
 .footer-section.social {
-
-
   display: flex;
   flex-direction: column;
   align-items: center;
