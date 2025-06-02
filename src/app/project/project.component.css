@@ -9,8 +9,6 @@
 
 .image-container {
   text-align: center; /* برای وسط‌چین کردن کپشن */
-  background-color: white;
-  border: 9px solid #0d62a7;
   border-radius: 10px;
   padding: 5px;
   transition: transform 0.3s;
@@ -33,8 +31,7 @@ img {
 
 a:hover {
   transform: scale(1.1);
-  /* border: 9px solid #3a3a3a; */
-  background-color: #3a3a3a;
+
 
 }
 
