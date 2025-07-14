@@ -10,11 +10,30 @@ body, html {
 }
 
 
-a.active{
+/* a.active{
   font-weight: bold;
-  color: whitesmoke;
+  color: red;
 
+} */
+
+
+a.nav-link {
+  color: white !important;
+  text-decoration: none;
+   transition: all 0.3s ease;
+   font-size: 36px;
 }
+
+a.nav-link.active {
+  font-weight: bold;
+  color: #d1a1b4 !important;
+  border-bottom: 2px solid #d1a1b4 ;
+   /* text-shadow: 1px 1px 2px #000; */
+     transform: scale(1.05);
+     text-shadow: 2px 2px 6px rgba(150, 0, 0, 0.9);
+}
+
+
 h1{
   text-align: center;
 }
@@ -24,6 +43,7 @@ header{
 }
 
 ul{
+
   background-color:#0451a6 ;
   list-style-type: none;
   margin: 0 0 2em 0;
@@ -31,6 +51,9 @@ ul{
   display: flex; /* آیتم‌ها کنار هم */
   flex-wrap: wrap; /* اگر جا نشد، بره خط بعد */
 }
+
+
+
 
 ul li{
   display: inline-flex;
@@ -58,27 +81,26 @@ ul li{
 
 }
 .bloom-title {
-  /* font-family: 'Dancing Script', cursive; */
-  font-family: "Great Vibes", "Dancing Script", "Segoe Script", cursive;
-  font-size: 22px;
+font-family: "Dancing Script", "Great Vibes", "Segoe Script", cursive;
+  font-size: 69px;
   font-weight: bold;
   color: #0451a6;
-  margin-top: 1px;
- margin-right: 55%;
+  margin-top: 17px;
+ margin-right: 40%;
 }
 .bloom-title2{
-  /* font-family: "Great Vibes", "Dancing Script", "Segoe Script", cursive; */
   font-family: 'Cormorant Unicase', serif;
-  /* font-family: "Century Gothic", "Segoe UI", sans-serif;  */
-  font-size: 20px;
+    font-style: italic;
+  font-size: 32px;
   font-weight: bold;
   color: #0451a6;
-  margin-top: 1px;
- margin-right: 60%;
- margin-top: -18px;
+  /* margin-top: 1px; */
+ margin-right: 55%;
+ margin-top: -26px;
 
 
 }
+
 
 
 .container{
@@ -247,19 +269,12 @@ button.b mat-icon {
 }
 
 /* کد های نوار بالای هدر */
-.marquee {
-  height: 50px; /* ارتفاع نوار */
-  overflow: hidden; /* جلوگیری از نمایش متن اضافه */
-  background: #0451a6; /* رنگ پس‌زمینه */
-  position: relative;
-}
 
-/* استایل برای متن متحرک */
 .marquee {
-  position: relative; /* مرجع برای موقعیت متن */
-  height: 50px; /* ارتفاع مشخص */
+  height: 50px;
   overflow: hidden;
-  background:#0451a6;
+  background: #0451a6;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,57 +285,39 @@ button.b mat-icon {
   position: absolute;
   width: 100%;
   text-align: center;
-  animation: marquee-vertical 6s ease-in-out infinite;
-}
-.line {
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  animation: fadeSlide 6s ease-in-out infinite;
   font-size: 26px;
   margin-top: 1%;
+  opacity: 0;
+  top: 0; /* تغییر از 100% به 0 */
+  animation: fadeSlide 9s ease-in-out infinite;
+}
 
+.line1 {
+  animation-delay: 0s !important;
 }
 
 .line2 {
-  animation-delay: 6s;
-
+  animation-delay: 3s !important;
 }
+
 .line3 {
-  position: absolute;
-  width: 100%;
-  top: 200%;
-  animation: marquee-vertical 6s ease-in-out infinite;
-  animation-delay: 12s;
+  animation-delay: 6s !important;
   direction: ltr;
-  text-align: center;
-  font-size: 26px;
-  font-family: 'Cormorant Unicase', serif;
+  font-family:  serif;
 }
 
-
-@keyframes marquee-vertical {
-  0% {
-    top: 100%;
-  }
-  10%, 40% {
-    top: 0%;
-  }
-  50% {
-    top: -100%;
-  }
-  100% {
-    top: -100%;
-  }
-
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(100%); }
+  10% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(0); }
+  40% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 0; }
 }
 
 
 
 
-.marquee p:nth-child(2) {
-  animation-delay: 3s;
-}
+
 
 .dropdown {
   position: relative;
