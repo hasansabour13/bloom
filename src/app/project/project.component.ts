@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
+import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+// import { ProductService } from '../product.service';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';//برای ایکون متریال
 import { MatButtonModule } from '@angular/material/button';//برای دکمه انگولار متریال
@@ -15,3 +16,4 @@ import { MatButtonModule } from '@angular/material/button';//برای دکمه �
 export class ProjectComponent {
 
 }
+

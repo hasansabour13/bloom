@@ -122,43 +122,39 @@ p.with{
   margin-left: 5%;
 }
 
+
 /* فوتر */
 .footer {
-  background-color:#0d62a7;
+  background-color:#0451a6;
   color: #bbb;
   width: 100%;
-  padding: 9px 0;
-  text-align: center;
+  padding: 73px 0;
   font-size: 14px;
   margin-top: 3%;
   box-sizing: border-box;
 }
 
-
-
-
 .footer-container {
-
-  margin: 0 auto; /* وسط‌چین کردن المنت */
-  display: flex; /* استفاده از مدل Flexbox */
-  justify-content: space-around; /* توزیع یکنواخت فضا بین آیتم‌ها */
-  flex-wrap: wrap; /* انتقال آیتم‌ها به خط بعدی در صورت نیاز */
-  gap: 15px; /* فاصله 20px بین آیتم‌ها */
+ display: flex;
+    flex-direction: row; /* ترتیب را از چپ به راست تنظیم کن */
+    align-items: flex-start; /* چسباندن به سمت چپ */
+    justify-content: flex-start; /* چسباندن کل محتوا به سمت چپ */
+    flex-wrap: wrap; /* انتقال آیتم‌ها به خط بعدی در صورت نیاز */
+     gap: 300px; /* فاصله 20px بین آیتم‌ها */
 }
 
 .footer-section.social {
-
-
   display: flex;
   flex-direction: column;
-  align-items: center;
+    text-align: left; /* متن‌های داخل بخش چپ‌چین شوند */
+
   margin-top: 6px;
 
 }
 
 .footer-section h3 {
   margin-bottom: 15px;
-  font-size: 18px;
+
   color: #fff;
 }
 
@@ -167,14 +163,19 @@ p.with{
 .footer-section li {
   margin: 8px 0;
   display: block;
-  font-size: 9px;
+  font-size: 6px;
   text-align:right;
 }
 
 
 .footer h3{
-  font-size: 26px;
-  text-align: right;
+  font-size: 30px;
+  /* text-align: right; */
+
+}
+
+h3.dast{
+  margin-right: 4%;
 }
 
 
@@ -190,6 +191,9 @@ p.with{
   display: flex;
   gap: 12px;
   margin-top: 10px;
+
+    justify-content: center; /* وسط‌چین کردن فقط آیکون‌ها */
+    width: 100%; /* استفاده از تمام عرض بخش */
 }
 
 .social-icon, .social-icons a mat-icon {
@@ -211,15 +215,24 @@ p.with{
   background-color: #0088cc; /* تلگرام */
 }
 
+.whatsapp {
+    background-color: #25D366; /* رنگ واتساپ */
+}
+.whatsapp:hover {
+   background-color: #25D366 !important; /* حفظ همان رنگ */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.instagram:hover{
+  background-color: #E1306C !important;
+}
+
 .social-icon:hover, .social-icons a mat-icon:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 
 }
 
-.social-icon:hover{
-background-color: #E1306C !important;
-}
 
 
 

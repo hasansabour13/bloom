@@ -1,86 +1,69 @@
+
 <main>
   <div class="product-detail-container">
+    <!-- گالری تصاویر -->
+    <div class="gallery">
+      <button class="arrow left" (click)="previousImage()">&#10094;</button>
 
+      <img [src]="mainImage" alt="Product Image" class="main-image">
 
-<!-- گالری تصاویر -->
-<div class="gallery">
+      <button class="arrow right" (click)="nextImage()">&#10095;</button>
 
-  <!-- تصویر یا ویدیو اصلی -->
-  <ng-container *ngIf="isVideo(mainImage); else imageTemplate">
-    <video [src]="mainImage" controls class="main-image"></video>
-  </ng-container>
-
-  <ng-template #imageTemplate>
-    <img [src]="mainImage" alt="Product Image" class="main-image">
-  </ng-template>
-
-  <!-- تصاویر کوچک (thumbnails) -->
-  <div class="thumbnails">
-    <ng-container *ngFor="let img of productData?.images">
-      <ng-container *ngIf="isVideo(img); else imgThumb">
-        <video [src]="img" (click)="selectImage(img)" class="thumbnail" muted></video>
-      </ng-container>
-      <ng-template #imgThumb>
-        <img [src]="img" (click)="selectImage(img)" alt="Thumbnail" class="thumbnail">
-      </ng-template>
-    </ng-container>
-  </div>
-
-</div>
-
-
+      <div class="thumbnails">
+        <ng-container *ngFor="let img of productData?.images; let i = index">
+          <img [src]="img"
+               (click)="selectImage(img)"
+               [class.active]="i === currentImageIndex"
+               alt="Thumbnail"
+               class="thumbnail">
+        </ng-container>
+      </div>
+    </div>
 
     <!-- توضیحات محصول -->
     <div class="product-description">
       <h2>{{ productData?.name }}</h2>
-      <p>{{ productData?.description }}</p>
-      <p class="price">{{ productData?.price }} تومان</p>
-    </div>
+      <p class="tozihat">    {{ productData?.description }}</p>
+      <p class="product-id">کد محصول: {{ productId }}</p>
 
-    <!-- دکمه افزودن به سبد خرید -->
-    <div class="add-to-cart">
-      <button mat-raised-button color="accent"  (click)="addToCart(productData)" >افزودن به سبد خرید</button>
-    </div>
+      <!-- انتخاب رنگ -->
+      <!-- <div class="options">
+        <label>رنگ:</label>
+        <select [(ngModel)]="selectedColor">
+          <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+        </select>
+      </div> -->
 
-    <!-- فرم ارسال نظر -->
-    <div class="review-section">
-      <h3>نظر شما</h3>
-      <textarea [(ngModel)]="review" placeholder="نظر خود را بنویسید..." rows="4"></textarea>
-      <button mat-raised-button color="primary" (click)="submitReview()">ارسال نظر</button>
+
+      <!-- دکمه‌های انتخاب رنگ -->
+<div class="color-buttons">
+  <label class="rang">رنگ:</label>
+  <div class="color-options">
+ <button *ngFor="let color of colorList"
+        (click)="selectColor(color.name)"
+        [ngStyle]="{ 'background-color': color.colorCode }"
+        class="color-btn">
+</button>
+  </div>
+</div>
+
+
+      <!-- انتخاب سایز -->
+      <div class="options">
+        <label>سایز:</label>
+        <select [(ngModel)]="selectedSize">
+          <option *ngFor="let size of sizes" [value]="size">{{ size }}</option>
+        </select>
+      </div>
+
+      <p class="price"><span class="label">قیمت:</span> {{ productData?.price }} تومان</p>
+
+      <!-- دکمه افزودن به سبد خرید -->
+      <div class="add-to-cart">
+        <button class="sabad" (click)="addToCart(productData)">
+          افزودن به سبد خرید
+        </button>
+      </div>
     </div>
-    <p>شناسه محصول: {{ productId }}</p>
   </div>
 </main>
-
-
-
-<footer class="footer">
-  <div class="footer-container">
-      <div class="footer-section">
-          <h3>دسترسی سریع</h3>
-          <ul>
-            <li><a routerLink="/contact" class="footer-link">صفحه اصلی</a></li>
-            <li><a routerLink="/media" class="footer-link">پیگیری شکایات</a></li>
-            <li><a routerLink="/guide" class="footer-link">تماس با ما</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <h3>راهنمای مشتریان</h3>
-          <ul>
-            <li><a routerLink="/contact" class="footer-link">پاسخ به پرسش‌های متداول</a></li>
-            <li><a routerLink="/media" class="footer-link">قوانین</a></li>
-            <li><a routerLink="/guide" class="footer-link">ایمیل: bloom</a></li>
-            <li><a routerLink="/blog" class="footer-link">درباره ما</a></li>
-          </ul>
-      </div>
-      <div class="footer-section social">
-          <h3>بلوم استایل در شبکه‌های اجتماعی</h3>
-          <div class="social-icons">
-              <a href="https://telegram.org"> <mat-icon>telegram</mat-icon></a>
-              <a href="https://twitter.com" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-      </div>
-  </div>
-</footer>
-
-

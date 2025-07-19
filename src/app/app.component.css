@@ -62,8 +62,8 @@ ul li{
 }
 
 .logo{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius:50%;
   justify-self: end;
 
@@ -86,7 +86,7 @@ font-family: "Dancing Script", "Great Vibes", "Segoe Script", cursive;
   font-weight: bold;
   color: #0451a6;
   margin-top: 17px;
- margin-right: 40%;
+ margin-right: 25%;
 }
 .bloom-title2{
   font-family: 'Cormorant Unicase', serif;
@@ -95,7 +95,7 @@ font-family: "Dancing Script", "Great Vibes", "Segoe Script", cursive;
   font-weight: bold;
   color: #0451a6;
   /* margin-top: 1px; */
- margin-right: 55%;
+ margin-right: 43%;
  margin-top: -26px;
 
 
