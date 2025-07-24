@@ -5,15 +5,20 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';//برای ایکون متریال
 import { MatButtonModule } from '@angular/material/button';//برای دکمه انگولار متریال
+import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [ RouterModule,MatIconModule, MatButtonModule ],
+  imports: [RouterModule, MatIconModule, MatButtonModule,BreadcrumbComponent],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
+  breadcrumbPath = [
+  { label: 'خانه', link: '/' },
+  { label: 'هودی' }
+];
 
 }
 

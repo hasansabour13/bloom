@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common'; // ماژول‌های عموم�
 import { RouterModule } from '@angular/router'; // ماژول مسیریابی انگولار
 import { MatButtonModule } from '@angular/material/button'; // دکمه‌های متریال
 import { FormsModule } from '@angular/forms'; // فرم‌ها و دوطرفه‌سازی داده (ngModel)
-import { CartService } from '../cart.service'; // سرویس سبد خرید (خدمات مربوط به کارت)
+import { CartService } from '../cart.service';
+import { BreadcrumbComponent } from "../breadcrumb/breadcrumb.component"; // سرویس سبد خرید (خدمات مربوط به کارت)
 
 // تعریف کامپوننت با selector و مشخصات
 @Component({
   selector: 'app-product-detail',
   standalone: true, // کامپوننت مستقل بدون نیاز به ماژول جدا
-  imports: [RouterModule, CommonModule, MatButtonModule, FormsModule], // ماژول‌های استفاده شده در این کامپوننت
+  imports: [RouterModule, CommonModule, MatButtonModule, FormsModule, BreadcrumbComponent], // ماژول‌های استفاده شده در این کامپوننت
   templateUrl: './product-detail.component.html', // آدرس فایل HTML مربوط به این کامپوننت
   styleUrl: './product-detail.component.css' // آدرس فایل CSS مربوط به این کامپوننت
 })
@@ -42,6 +43,9 @@ colorList = [
   { name: 'آبی', colorCode: 'blue', image: 'assets/pants-blue.jpg' },
   { name: 'مشکی', colorCode: 'black', image: 'assets/pants-black.jpg' }
 ];
+
+//breadcrumb
+  breadcrumbPath: { label: string; link?: string | undefined; }[] = [];
 
 
 selectColor(colorName: string) {
@@ -82,6 +86,7 @@ selectColor(colorName: string) {
   allProducts: any[] = [
     {
       id: '1',
+        category: 'sh',
       name: 'شلوار جین زنانه',
       images: ['assets/شلوار/1.jpg', 'assets/شلوار/2.jpg'],
       description: 'شلوار جین کلاسیک زنانه',
@@ -94,6 +99,7 @@ selectColor(colorName: string) {
     },
     {
       id: '2',
+        category: 'sh',
       name: 'شلوار بگ',
       images: ['assets/شلوار/3.jpg', 'assets/شلوار/4.jpg'],
       description: 'شلوار بگ راحتی با پارچه لینن',
@@ -101,6 +107,7 @@ selectColor(colorName: string) {
     },
     {
       id: '3',
+        category: 'sh',
       name: 'شلوار رسمی',
       images: ['assets/شلوار/5.jpg'],
       description: 'شلوار پارچه‌ای رسمی',
@@ -108,7 +115,8 @@ selectColor(colorName: string) {
     },
     {
       id: '12',
-      name: 'هودی',
+       category: 'project',
+      name: '  هودی برند نایک',
       images: ['assets/هودی/یک.jpg', 'assets/هودی/دو.jpg' , 'assets/هودی/دو.jpg'],
       description: 'هودی گرم و راحت',
       price:"200/000",
@@ -119,6 +127,12 @@ selectColor(colorName: string) {
   }
     }
   ];
+
+
+
+
+
+
 
   // متد lifecycle که هنگام شروع اجرا می‌شود (کامپوننت لود می‌شود)
   ngOnInit() {
@@ -135,6 +149,29 @@ selectColor(colorName: string) {
     this.colorImageMap = this.productData.colorImageMap || {};
     this.colors = Object.keys(this.colorImageMap);
     }
+
+
+
+
+      // breadcrumb
+let categoryLabel = '';
+let categoryLink = '';
+
+if (this.productData?.category === 'project') {
+  categoryLabel = 'هودی';
+  categoryLink = '/project';
+} else if (this.productData?.category === 'sh') {
+  categoryLabel = 'شلوار';
+  categoryLink = '/sh';
+}
+
+
+
+this.breadcrumbPath = [
+  { label: 'خانه', link: '/' },
+  { label: categoryLabel, link: categoryLink },
+  { label: this.productData.name }
+];
 
 
   }

@@ -1,0 +1,40 @@
+/*
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #444;
+  font-family: vazir, sans-serif;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: #555;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+} */
+
+
+.breadcrumb {
+  font-size: 18px; /* بزرگ‌تر از حالت عادی */
+  margin-bottom: 20px;
+  direction: rtl; /* راست‌چین برای فارسی */
+  font-family: vazir, sans-serif;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.breadcrumb a {
+  color: #888; /* خاکستری */
+  text-decoration: none; /* خط زیر لینک حذف بشه */
+}
+
+.breadcrumb a:hover {
+  color: #666; /* هنگام هاور کمی تیره‌تر */
+}
+
+.breadcrumb span {
+  color: #000; /* متن آخر (بدون لینک) مشکی */
+  font-weight: bold;
+}
