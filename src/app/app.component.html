@@ -8,131 +8,102 @@
   </div>
 
 
-<div class="container">
+  <div class="my-container ">
 
-<a  routerLink="">
-  <div class="logo-wrapper">
-    <img class="logo"  src="assets/logo2.jpg" alt="">
-    <p class="bloom-title">Bloom </p>
-    <p class="bloom-title2"> STYLE</p>
+    <a routerLink="">
+      <div class="logo-wrapper">
+        <img class="logo" src="assets/logo2.jpg" alt="">
+
+        <div class="logo-texts">
+          <div class="bloom-title">Bloom</div>
+          <div class="bloom-title2">STYLE</div>
+        </div>
+
+      </div>
+    </a>
+
+
+
+    <div class="b1">
+      <form (ngSubmit)="onSearch()" class="search-form" action="">
+        <input class="input" type="search" [(ngModel)]="searchQuery" name="searchQuery"
+          placeholder="محصول مورد نظر خود را جستجو کنید">
+        <button class="b" type="submit"> <mat-icon>search</mat-icon></button>
+      </form>
+
+    </div>
+
+
+
+
+    <div class="b2">
+      <!-- آیکون ادمک -->
+      <a routerLink="/login" class="login-link" title="ورود / عضویت" aria-label="ورود">
+        <i class="user-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5.5 21a6.5 6.5 0 0 1 13 0"></path>
+          </svg>
+        </i>
+      </a>
+      <!-- سبد خرید -->
+
+      <a routerLink="/cart" class="cart-link" aria-label="سبد خرید" title="سبد خرید">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+      <!-- علاقه مندی -->
+      <a href="#" class="favorite-link" aria-label="محصولات مورد علاقه" title="محصولات مورد علاقه">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="favorite-icon">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z">
+          </path>
+        </svg>
+      </a>
+      <!-- اینستاگرام -->
+      <a href="https://www.instagram.com" class="instagram-link" aria-label="اینستاگرام"
+        title="شبکه هلی اجتماعی بلوم استایل">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z"></path>
+          <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+        </svg>
+      </a>
+
+
+
+
+    </div>
+
 
   </div>
-</a>
-
-
-
-<div class="b1" >
-  <form (ngSubmit)="onSearch()" class="search-form" action="">
-    <input class="input" type="search" [(ngModel)]="searchQuery" name="searchQuery"  placeholder="محصول مورد نظر خود را جستجو کنید">
-    <button    class="b" type="submit"> <mat-icon>search</mat-icon></button>
-  </form>
-
-</div>
-
-
-
-
-<div class="b2">
-<!-- آیکون ادمک -->
-<a routerLink="/login" class="login-link" title="ورود / عضویت"  aria-label="ورود">
-  <i class="user-icon">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24" height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <circle cx="12" cy="7" r="4"></circle>
-      <path d="M5.5 21a6.5 6.5 0 0 1 13 0"></path>
-    </svg>
-  </i>
-</a>
-<!-- سبد خرید -->
-
-<a routerLink="/cart" class="cart-link" aria-label="سبد خرید" title="سبد خرید">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="cart-icon"
-  >
-    <circle cx="9" cy="21" r="1"></circle>
-    <circle cx="20" cy="21" r="1"></circle>
-    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-  </svg>
-</a>
-<!-- علاقه مندی -->
-<a href="#" class="favorite-link" aria-label="محصولات مورد علاقه" title="محصولات مورد علاقه">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="40"
-    height="40"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="favorite-icon"
-  >
-    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-  </svg>
-</a>
-<!-- اینستاگرام -->
-<a href="https://www.instagram.com" class="instagram-link" aria-label="اینستاگرام" title="شبکه هلی اجتماعی بلوم استایل">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width="40"
-    height="40"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="instagram-icon"
-  >
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z"></path>
-    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-  </svg>
-</a>
-
-
-
-
-</div>
-
-
-</div>
 
 
   <ul>
     <li>
-      <a  class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >خانه </a>
+      <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">خانه </a>
     </li>
 
 
     <li>
-      <a  class="nav-link mahsolat"  (click)="scrollToProducts()">محصولات</a>
+      <a class="nav-link mahsolat" (click)="scrollToProducts()">محصولات</a>
     </li>
 
 
 
     <li>
-      <a  class="nav-link" routerLink="project" routerLinkActive="active">هودی</a>
+      <a class="nav-link" routerLink="project" routerLinkActive="active">هودی</a>
     </li>
 
     <li>
-      <a  class="nav-link" routerLink="sh" routerLinkActive="active">شلوار</a>
+      <a class="nav-link" routerLink="sh" routerLinkActive="active">شلوار</a>
     </li>
 
 
@@ -142,32 +113,26 @@
 
 
     <li>
-      <a  class="nav-link" routerLink="login" routerLinkActive="active">ثبت نام</a>
+      <a class="nav-link" routerLink="login" routerLinkActive="active">ثبت نام</a>
     </li>
 
 
     <li>
-      <a  class="nav-link" routerLink="cart" routerLinkActive="active"> سبد خرید</a>
+      <a class="nav-link" routerLink="cart" routerLinkActive="active"> سبد خرید</a>
     </li>
 
 
     <li>
-      <a  class="nav-link" routerLink="test" routerLinkActive="active"> testد</a>
+      <a class="nav-link" routerLink="test" routerLinkActive="active"> testد</a>
     </li>
 
 
     <!-- li to dar to -->
 
-    <li class="dropdown" (click)="togglePerfumeMenu()" [class.open]="isPerfumeOpen">
-      <a href="#">عطر</a>
-      <ul class="submenu" *ngIf="isPerfumeOpen">
-        <li><a routerLink="atr-mardane" routerLinkActive="active">مردانه</a></li>
-        <li><a routerLink="atr-zanane" routerLinkActive="active">زنانه</a></li>
-      </ul>
-    </li>
+   
 
 
-<!--  -->
+    <!--  -->
 
   </ul>
 

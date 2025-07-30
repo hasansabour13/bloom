@@ -27,7 +27,7 @@ a.nav-link {
 a.nav-link.active {
   font-weight: bold;
   color: #d1a1b4 !important;
-  border-bottom: 2px solid #d1a1b4 ;
+  /* border-bottom: 2px solid #d1a1b4 ; */
    /* text-shadow: 1px 1px 2px #000; */
      transform: scale(1.05);
      text-shadow: 2px 2px 6px rgba(150, 0, 0, 0.9);
@@ -61,13 +61,20 @@ ul li{
   margin-right: 3%;
 }
 
+.logo-texts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+
 .logo{
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   border-radius:50%;
   justify-self: end;
+  margin-top: 26px; /* یا هر مقدار دلخواه مثل 8px، 10px */
 
-  margin-top: 1%;
 }
 
 .logo-wrapper {
@@ -82,28 +89,28 @@ ul li{
 }
 .bloom-title {
 font-family: "Dancing Script", "Great Vibes", "Segoe Script", cursive;
-  font-size: 69px;
+  font-size: 49px;
   font-weight: bold;
   color: #0451a6;
-  margin-top: 17px;
- margin-right: 25%;
+  margin-top: 1px !important;
+ margin-right: 46% !important;
 }
 .bloom-title2{
   font-family: 'Cormorant Unicase', serif;
     font-style: italic;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
   color: #0451a6;
   /* margin-top: 1px; */
- margin-right: 43%;
- margin-top: -26px;
-
+ margin-right: 63% !important;
+ /* margin-top: -26px !important; */
+margin-bottom: 13px;
 
 }
 
 
 
-.container{
+.my-container{
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* لوگو | سرچ | دکمه‌ها */
@@ -319,10 +326,7 @@ button.b mat-icon {
 
 
 
-.dropdown {
-  position: relative;
-  cursor: pointer;
-}
+
 
 .submenu {
   position: absolute;

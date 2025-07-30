@@ -11,7 +11,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule,MatButtonModule,MatIconModule,FormsModule,NgIf],
+  imports: [RouterOutlet, RouterModule, MatButtonModule, MatIconModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -25,9 +25,7 @@ export class AppComponent {
 // برای ال آی تو در تو
 isPerfumeOpen = false;
 
-togglePerfumeMenu() {
-  this.isPerfumeOpen = !this.isPerfumeOpen;
-}
+
 
 
 
